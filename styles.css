@@ -171,9 +171,9 @@ img { display: block; max-width: 100%; }
   inset: 0;
   background-image: url('assets/img/hero.jpg');
   background-size: cover;
-  background-position: center 50%;
+  background-position: center center;
   will-change: transform;
-  filter: brightness(0.78);
+  filter: brightness(0.65) contrast(1.1);
 }
 
 .hero__overlay {
@@ -481,9 +481,9 @@ img { display: block; max-width: 100%; }
   inset: -20% 0;
   background-image: url('assets/img/break.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 35%;
   will-change: transform;
-  filter: grayscale(18%) contrast(1.06) brightness(0.8);
+  filter: grayscale(10%) contrast(1.05) brightness(0.75);
 }
 .photo-break__overlay {
   position: absolute;
