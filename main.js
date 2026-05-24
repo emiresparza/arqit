@@ -94,9 +94,9 @@
 
       if (heroBg) {
         const t      = (Date.now() - t0) / 1000;
-        const scale  = 1.08 + Math.sin(t * 0.055) * 0.05;
-        const driftX = Math.sin(t * 0.04) * 10 + nbx * range;
-        const driftY = Math.sin(t * 0.03) *  7 + nby * range;
+        const scale  = 1.08 + Math.sin(t * 0.18) * 0.06;
+        const driftX = Math.sin(t * 0.14) * 22 + nbx * range;
+        const driftY = Math.sin(t * 0.11) * 14 + nby * range;
         heroBg.style.transform = `scale(${scale.toFixed(4)}) translate(${driftX.toFixed(2)}px, ${driftY.toFixed(2)}px)`;
       }
 
@@ -125,9 +125,9 @@
 
         if (el.classList.contains('photo-break__img')) {
           const t      = (Date.now() - t0kb) / 1000;
-          const scale  = 1.06 + Math.sin(t * 0.06) * 0.04;
-          const driftX = Math.sin(t * 0.05) * 14;
-          const driftY = fromCenter * speed + Math.sin(t * 0.04) * 9;
+          const scale  = 1.08 + Math.sin(t * 0.22) * 0.06;
+          const driftX = Math.sin(t * 0.16) * 22;
+          const driftY = fromCenter * speed + Math.sin(t * 0.13) * 14;
           el.style.transform = `scale(${scale.toFixed(4)}) translate(${driftX.toFixed(2)}px, ${driftY.toFixed(2)}px)`;
         } else {
           el.style.transform = `translateY(${(fromCenter * speed).toFixed(2)}px)`;
