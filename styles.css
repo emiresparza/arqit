@@ -171,17 +171,17 @@ img { display: block; max-width: 100%; }
   inset: 0;
   background-image: url('assets/img/hero.jpg');
   background-size: cover;
-  background-position: center 40%;
+  background-position: center 50%;
   will-change: transform;
-  filter: brightness(0.72) contrast(1.08) saturate(0.85);
+  filter: brightness(0.78);
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(14,14,12,0.55) 0%, rgba(14,14,12,0.15) 40%, rgba(14,14,12,0.7) 100%),
-    radial-gradient(ellipse at 65% 50%, transparent 35%, rgba(14,14,12,0.5) 100%);
+    linear-gradient(to bottom, rgba(14,14,12,0.38) 0%, rgba(14,14,12,0.05) 35%, rgba(14,14,12,0.62) 100%),
+    radial-gradient(ellipse at 65% 50%, transparent 40%, rgba(14,14,12,0.4) 100%);
   pointer-events: none;
 }
 
@@ -502,15 +502,15 @@ img { display: block; max-width: 100%; }
   max-width: 540px;
 }
 
-/* ── Contacto bg ── */
-.contacto__bg {
+/* ── Section photo bg (subtle, reusable) ── */
+.section__photo-bg {
   position: absolute;
   inset: 0;
-  background-image: url('assets/img/contacto.jpg');
+  background-image: var(--bg-img);
   background-size: cover;
-  background-position: center 35%;
-  opacity: 0.11;
-  filter: grayscale(35%) brightness(0.9);
+  background-position: center 40%;
+  opacity: 0.10;
+  filter: grayscale(30%) brightness(0.85);
   pointer-events: none;
   z-index: 0;
   will-change: transform;
