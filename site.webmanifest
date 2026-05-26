@@ -1,0 +1,17 @@
+{
+  "name": "ARQit",
+  "short_name": "ARQit",
+  "description": "Sitios web especializados para arquitectura, ingenieria y oficios creativos.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0e0e0c",
+  "theme_color": "#fa3019",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

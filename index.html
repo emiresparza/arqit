@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ARQit — Sitios web para arquitectura e ingeniería</title>
   <meta name="description" content="Diseñamos e implementamos sitios web claros, profesionales y preparados para representar correctamente tu trabajo." />
+  <meta name="theme-color" content="#fa3019" />
+  <meta name="application-name" content="ARQit" />
+  <meta name="apple-mobile-web-app-title" content="ARQit" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="mask-icon" href="assets/favicon.svg" color="#fa3019" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anaheim&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -37,10 +43,10 @@
     <div class="hero__content">
       <div class="hero__top reveal">
         <p class="hero__logo">ARQ<span>it!</span></p>
-        <p class="hero__desc mono">
-          <strong>Sitios web</strong> especializados para<br>
-          arquitectura, ingeniería<br>y oficios creativos.
-        </p>
+        <h2 class="hero__desc mono">
+          <strong>Sitios web</strong> especializados para <span class="hero__underline">arquitectura</span>,<br>
+          <span class="hero__underline">ingeniería</span> y <span class="hero__underline">oficios creativos</span>.
+        </h2>
       </div>
       <h1 class="hero__claim">
         <span data-depth="0.4" class="reveal">Claridad</span>
@@ -53,60 +59,79 @@
   <!-- TICKER -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker__track">
-      <span>SITIOS WEB</span><span class="ticker__dot">·</span>
-      <span>ARQUITECTURA</span><span class="ticker__dot">·</span>
-      <span>INGENIERÍA</span><span class="ticker__dot">·</span>
-      <span>DISEÑO EDITORIAL</span><span class="ticker__dot">·</span>
-      <span>ESSENTIAL</span><span class="ticker__dot">·</span>
-      <span>SIGNATURE</span><span class="ticker__dot">·</span>
-      <span>ATELIER</span><span class="ticker__dot">·</span>
-      <span>CLARIDAD DIGITAL</span><span class="ticker__dot">·</span>
-      <span>SITIOS WEB</span><span class="ticker__dot">·</span>
-      <span>ARQUITECTURA</span><span class="ticker__dot">·</span>
-      <span>INGENIERÍA</span><span class="ticker__dot">·</span>
-      <span>DISEÑO EDITORIAL</span><span class="ticker__dot">·</span>
-      <span>ESSENTIAL</span><span class="ticker__dot">·</span>
-      <span>SIGNATURE</span><span class="ticker__dot">·</span>
-      <span>ATELIER</span><span class="ticker__dot">·</span>
-      <span>CLARIDAD DIGITAL</span><span class="ticker__dot">·</span>
+      <span>TUS PROYECTOS TAMBIÉN COMUNICAN</span><span class="ticker__dot">·</span>
+      <span>DISEÑADO POR PERSONAS, NO POR PLANTILLAS</span><span class="ticker__dot">·</span>
+      <span>CLARIDAD PARA CONSTRUIR CONFIANZA</span><span class="ticker__dot">·</span>
+      <span>TU PRIMERA IMPRESIÓN ONLINE</span><span class="ticker__dot">·</span>
+      <span>IDENTIDAD VISUAL PARA PROYECTOS COMPLEJOS</span><span class="ticker__dot">·</span>
+      <span>TUS PROYECTOS TAMBIÉN COMUNICAN</span><span class="ticker__dot">·</span>
+      <span>DISEÑADO POR PERSONAS, NO POR PLANTILLAS</span><span class="ticker__dot">·</span>
+      <span>CLARIDAD PARA CONSTRUIR CONFIANZA</span><span class="ticker__dot">·</span>
+      <span>TU PRIMERA IMPRESIÓN ONLINE</span><span class="ticker__dot">·</span>
+      <span>IDENTIDAD VISUAL PARA PROYECTOS COMPLEJOS</span><span class="ticker__dot">·</span>
     </div>
   </div>
 
   <!-- SOMOS / HACEMOS -->
-  <section id="somos" class="section section--dark">
+  <section id="somos" class="section section--dark section--about">
     <div class="section__photo-bg" style="--bg-img: url('assets/img/somos.jpg')" data-scroll-speed="0.15"></div>
-    <div class="container">
-      <h2 class="section-title reveal">SOMOS.</h2>
-      <div class="text-block">
-        <p class="mono reveal">
-          <strong>ARQ<em>it</em></strong> es un estudio especializado en <strong>sitios web para arquitectura, ingeniería y oficios creativos.</strong>
-        </p>
-        <p class="mono reveal">
-          Te ayudamos a presentar tus proyectos, servicios y tu experiencia de forma <strong>clara, profesional y moderna.</strong>
-        </p>
-        <p class="mono reveal">
-          Nos enfocamos en crear <strong>sitios simples de usar, bien organizados y preparados</strong> para transmitir confianza desde el primer contacto.
-        </p>
+    <div class="container about">
+      <div class="about__row about__row--intro">
+        <div class="about__heading">
+          <h2 class="section-title reveal">SOMOS.</h2>
+        </div>
+        <div class="about__content text-block">
+          <p class="mono reveal">
+            <strong>ARQ<em>it</em></strong> es un estudio especializado en <strong>sitios web para arquitectura, ingeniería y oficios creativos.</strong>
+          </p>
+          <p class="mono reveal">
+            Te ayudamos a presentar tus proyectos, servicios y tu experiencia de forma <strong>clara, profesional y moderna.</strong>
+          </p>
+          <p class="mono reveal">
+            Nos enfocamos en crear <strong>sitios simples de usar, bien organizados y preparados</strong> para transmitir confianza desde el primer contacto.
+          </p>
+        </div>
       </div>
 
-      <h2 class="section-title mt-xl reveal">HACEMOS.</h2>
-      <div class="text-block">
-        <p class="mono reveal"><strong>Nos encargamos del proceso completo.</strong></p>
-        <p class="mono reveal">
-          Muchos profesionales terminan <strong>recibiendo un sitio incompleto</strong> que requiere ordenar contenido, escribir textos, organizar proyectos y resolver aspectos técnicos <strong>por cuenta propia.</strong>
-        </p>
-        <p class="mono reveal">En <strong>ARQ<em>it</em></strong> trabajamos distinto.</p>
-        <p class="mono reveal">
-          Te acompañamos desde la idea inicial hasta dejar el <strong>sitio completamente habilitado y listo para funcionar.</strong>
-        </p>
-        <p class="mono reveal">
-          Nos encargamos de: <strong>estructurar</strong> la información, <strong>organizar</strong> tus proyectos, <strong>optimizar</strong> tus visuales, y <strong>publicar</strong> todo.
-        </p>
-        <ul class="mono list-clean reveal">
-          <li>Sin procesos complejos.</li>
-          <li>Sin configuraciones técnicas exigentes.</li>
-          <li><strong>Sin trabajo pendiente.</strong></li>
-        </ul>
+      <div class="about__row about__row--process">
+        <div class="about__heading">
+          <h2 class="section-title reveal">HACEMOS.</h2>
+        </div>
+        <div class="about__content">
+          <div class="about__copy text-block">
+            <p class="mono reveal"><strong>Nos encargamos del proceso completo.</strong></p>
+            <p class="mono reveal">
+              Muchos profesionales terminan <strong>recibiendo un sitio incompleto</strong> que requiere ordenar contenido, escribir textos, organizar proyectos y resolver aspectos técnicos <strong>por cuenta propia.</strong>
+            </p>
+            <p class="mono reveal">En <strong>ARQ<em>it</em></strong> trabajamos distinto.</p>
+            <p class="mono reveal">
+              Te acompañamos desde la idea inicial hasta dejar el <strong>sitio completamente habilitado y listo para funcionar.</strong>
+            </p>
+          </div>
+
+          <div class="about__pillars">
+            <article class="about__pillar reveal">
+              <span class="about__mark" aria-hidden="true"></span>
+              <h3 class="mono">ESTRUCTURA</h3>
+              <p class="mono">Estructurar la información y organizar tus proyectos.</p>
+            </article>
+            <article class="about__pillar reveal">
+              <span class="about__mark" aria-hidden="true"></span>
+              <h3 class="mono">VISUALES</h3>
+              <p class="mono">Optimizar tus visuales y presentación.</p>
+            </article>
+            <article class="about__pillar reveal">
+              <span class="about__mark" aria-hidden="true"></span>
+              <h3 class="mono">PUBLICACIÓN</h3>
+              <p class="mono">Publicar todo y dejar tu sitio funcionando.</p>
+            </article>
+            <article class="about__pillar reveal">
+              <span class="about__mark" aria-hidden="true"></span>
+              <h3 class="mono">SIN PENDIENTES</h3>
+              <p class="mono">Sin procesos complejos, configuraciones técnicas exigentes ni trabajo pendiente.</p>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
     <span class="section-logo" aria-hidden="true">ARQ<em>it!</em></span>
@@ -116,7 +141,13 @@
   <div class="photo-break">
     <div class="photo-break__img" data-scroll-speed="0.28"></div>
     <div class="photo-break__overlay"></div>
-    <p class="photo-break__caption mono reveal">Presencia digital para quienes <strong>construyen el mundo.</strong></p>
+    <div class="photo-break__ticker mono reveal" aria-label="Presencia Digital Para Quienes CREAN EL MUNDO">
+      <div class="photo-break__track" aria-hidden="true">
+        <span><em class="photo-break__underline">Presencia</em><em class="photo-break__underline">Digital</em><span>Para Quienes</span><strong>CREAN EL MUNDO</strong><i class="photo-break__arrow"></i></span>
+        <span><em class="photo-break__underline">Presencia</em><em class="photo-break__underline">Digital</em><span>Para Quienes</span><strong>CREAN EL MUNDO</strong><i class="photo-break__arrow"></i></span>
+        <span><em class="photo-break__underline">Presencia</em><em class="photo-break__underline">Digital</em><span>Para Quienes</span><strong>CREAN EL MUNDO</strong><i class="photo-break__arrow"></i></span>
+      </div>
+    </div>
   </div>
 
   <!-- PLANES -->

@@ -3,22 +3,16 @@
 
   const isMobile = () => window.innerWidth <= 900;
 
+  document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+  });
+
   // ── Custom Cursor ──────────────────────────────────────────
   const cursor = document.getElementById('cursor');
-  if (cursor && !isMobile()) {
-    let mx = 0, my = 0, cx = 0, cy = 0;
-    let rafCursor;
-
-    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-
-    const tickCursor = () => {
-      cx += (mx - cx) * 0.1;
-      cy += (my - cy) * 0.1;
-      cursor.style.left = cx + 'px';
-      cursor.style.top  = cy + 'px';
-      rafCursor = requestAnimationFrame(tickCursor);
-    };
-    tickCursor();
+  if (cursor) {
+    document.addEventListener('mousemove', e => {
+      cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+    });
 
     document.querySelectorAll('a, button').forEach(el => {
       el.addEventListener('mouseenter', () => cursor.classList.add('cursor--expanded'));
