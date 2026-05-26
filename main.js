@@ -67,7 +67,7 @@
     const heroWords = document.querySelectorAll('.hero__claim span[data-depth]');
 
     let tx = 0, ty = 0, nbx = 0, nby = 0;
-    const range = 28;
+    const range = 18;
     const bgEase = 0.055;
     const wordEase = 0.07;
     let wox = 0, woy = 0;
@@ -89,8 +89,8 @@
       if (heroBg) {
         const t      = (Date.now() - t0) / 1000;
         const scale  = 1.08 + Math.sin(t * 0.18) * 0.11;
-        const driftX = Math.sin(t * 0.14) * 42 + nbx * range;
-        const driftY = Math.sin(t * 0.11) * 26 + nby * range;
+        const driftX = Math.sin(t * 0.14) * 24 + nbx * range;
+        const driftY = Math.sin(t * 0.11) * 16 + nby * range;
         heroBg.style.transform = `scale(${scale.toFixed(4)}) translate(${driftX.toFixed(2)}px, ${driftY.toFixed(2)}px)`;
       }
 
@@ -154,6 +154,45 @@
 
   window.addEventListener('scroll', updateNav, { passive: true });
   updateNav();
+
+  // Floating previous-section button
+  const sectionUpBtn = document.getElementById('section-up-btn');
+  const footer = document.querySelector('.footer');
+  const pageSections = Array.from(document.querySelectorAll('section[id]'));
+
+  const getCurrentSectionIndex = () => {
+    const anchorY = window.scrollY + window.innerHeight * 0.38;
+    let currentIndex = 0;
+
+    pageSections.forEach((section, index) => {
+      if (section.offsetTop <= anchorY) currentIndex = index;
+    });
+
+    return currentIndex;
+  };
+
+  const updateSectionUpBtn = () => {
+    if (!sectionUpBtn || pageSections.length === 0) return;
+
+    const footerVisible = footer
+      ? footer.getBoundingClientRect().top <= window.innerHeight
+      : false;
+    const nearTop = window.scrollY < 120;
+
+    sectionUpBtn.classList.toggle('is-hidden', nearTop || footerVisible);
+  };
+
+  if (sectionUpBtn && pageSections.length > 0) {
+    sectionUpBtn.addEventListener('click', () => {
+      const currentIndex = getCurrentSectionIndex();
+      const targetIndex = Math.max(currentIndex - 1, 0);
+      pageSections[targetIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    window.addEventListener('scroll', updateSectionUpBtn, { passive: true });
+    window.addEventListener('resize', updateSectionUpBtn);
+    updateSectionUpBtn();
+  }
 
   // ── Mobile Nav Toggle ──────────────────────────────────────
   const toggle   = document.getElementById('nav-toggle');
