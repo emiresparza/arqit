@@ -2,6 +2,7 @@
   'use strict';
 
   const isMobile = () => window.innerWidth <= 900;
+  const hasFinePointer = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   document.addEventListener('contextmenu', event => {
     event.preventDefault();
@@ -9,7 +10,7 @@
 
   // ── Custom Cursor ──────────────────────────────────────────
   const cursor = document.getElementById('cursor');
-  if (cursor) {
+  if (cursor && hasFinePointer()) {
     document.addEventListener('mousemove', e => {
       cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
     });
@@ -18,6 +19,8 @@
       el.addEventListener('mouseenter', () => cursor.classList.add('cursor--expanded'));
       el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--expanded'));
     });
+  } else if (cursor) {
+    cursor.remove();
   }
 
   // ── Scroll Reveal ──────────────────────────────────────────
@@ -47,9 +50,11 @@
     document.querySelectorAll(selector).forEach(parent => {
       const children = parent.querySelectorAll('.reveal');
       children.forEach((child, i) => {
-        const base = 0.08;
-        const step = 0.12;
-        child.dataset.delay = (base + Math.min(i * step, 0.4)).toFixed(2);
+        const isMethodSteps = parent.matches('.metodologia__steps');
+        const base = isMethodSteps ? 0 : 0.08;
+        const step = isMethodSteps ? 0.045 : 0.12;
+        const maxDelay = isMethodSteps ? 0.18 : 0.4;
+        child.dataset.delay = (base + Math.min(i * step, maxDelay)).toFixed(2);
       });
     });
   });
@@ -62,7 +67,7 @@
   revealEls.forEach(el => observerText.observe(el));
 
   // ── Hero Parallax (mouse) ──────────────────────────────────
-  if (!isMobile()) {
+  if (!isMobile() && hasFinePointer()) {
     const heroBg   = document.querySelector('.hero__bg');
     const heroWords = document.querySelectorAll('.hero__claim span[data-depth]');
 
@@ -107,7 +112,7 @@
   // ── Scroll Parallax + Ken Burns (photo sections) ──────────────────────
   const scrollParallaxEls = document.querySelectorAll('[data-scroll-speed]');
 
-  if (scrollParallaxEls.length > 0 && !isMobile()) {
+  if (scrollParallaxEls.length > 0 && !isMobile() && hasFinePointer()) {
     const t0kb = Date.now();
 
     const tickScrollParallax = () => {
