@@ -40,7 +40,7 @@
   const staggerParents = [
     '.text-block',
     '.metodologia__steps',
-    '.complementos__grid',
+    '.extras__grid',
     '.plan',
     '.contact__list',
     '.footer__top',
