@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://eead.cl/</loc>
+    <image:image>
+      <image:loc>https://eead.cl/assets/img/hero.jpg</image:loc>
+      <image:title>ARQit - sitios web para arquitectura e ingenieria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://eead.cl/assets/img/somos.jpg</image:loc>
+      <image:title>ARQit - claridad digital para estudios creativos</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://eead.cl/assets/img/contacto.jpg</image:loc>
+      <image:title>Contacto ARQit</image:title>
+    </image:image>
+  </url>
+</urlset>

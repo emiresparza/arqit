@@ -241,6 +241,9 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.08em;
   text-shadow: 0 1px 10px rgba(0,0,0,0.22);
 }
+.hero__ribbon-track strong {
+  font-weight: 800;
+}
 .hero__ribbon-track span::after {
   content: '·';
   padding-left: 2.4rem;
