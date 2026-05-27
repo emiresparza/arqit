@@ -5,6 +5,10 @@
   <url>
     <loc>https://eead.cl/</loc>
     <image:image>
+      <image:loc>https://eead.cl/assets/img/og-preview.jpg</image:loc>
+      <image:title>ARQit - claridad digital para tu estudio</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://eead.cl/assets/img/hero.jpg</image:loc>
       <image:title>ARQit - sitios web para arquitectura e ingenieria</image:title>
     </image:image>
